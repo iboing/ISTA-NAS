@@ -132,8 +132,6 @@ class Trainer:
             normal = gene_normal, normal_concat = concat,
             reduce = gene_reduce, reduce_concat = concat)
         print(genotype)
-        model_cifar = NetworkCIFAR(36, 10, 20, True, genotype)
-        logging.info('param size = %fMB', count_parameters_in_MB(model_cifar))
 
     def train(self):
         #
