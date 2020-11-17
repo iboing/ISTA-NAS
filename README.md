@@ -7,6 +7,7 @@ by [Yibo Yang](https://iboing.github.io/index.html), [Hongyang Li](https://zero-
 - [Introduction](#introduction)
 - [Dependencies](#dependencies)
 - [Usage](#usage)
+- [Citation](#citation)
 
 ## Introduction
 ## Dependencies
