@@ -25,7 +25,7 @@ def parse():
     parser.add_argument('--momentum', type=float, default=0.9, help='momentum')
     parser.add_argument('--weight_decay', type=float, default=3e-4, help='weight decay')
     parser.add_argument('--report_freq', type=float, default=50, help='report frequency')
-    parser.add_argument('--gpu', type=str, default='0', help='gpu device id')
+    parser.add_argument('--gpu', type=int, default=0, help='gpu device id')
     parser.add_argument('--epochs', type=int, default=600, help='num of training epochs')
     parser.add_argument('--init_channels', type=int, default=36, help='num of init channels')
     parser.add_argument('--layers', type=int, default=20, help='total number of layers')
@@ -35,7 +35,7 @@ def parse():
     parser.add_argument('--cutout_length', type=int, default=16, help='cutout length')
     parser.add_argument('--drop_path_prob', type=float, default=0.2, help='drop path probability')
     parser.add_argument('--save', type=str, default='EXP', help='experiment name')
-    parser.add_argument('--seed', type=int, default=2, help='random seed')
+    parser.add_argument('--seed', type=int, default=5, help='random seed')
     parser.add_argument('--grad_clip', type=float, default=5, help='gradient clipping')
     parser.add_argument('--train_portion', type=float, default=0.5, help='portion of training data')
     parser.add_argument('--auxiliary', action='store_true', default=False, help='use one-step unrolled validation loss')
@@ -50,6 +50,7 @@ def parse():
 def main():
     args = parse()
     #os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
+    torch.cuda.set_device(args.gpu)
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
     torch.cuda.manual_seed(args.seed)

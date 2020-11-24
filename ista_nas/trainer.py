@@ -107,11 +107,11 @@ class Trainer:
         gene_normal = []
         for i, x in enumerate(x_normals):
             id1, id2 = np.abs(x).argsort()[-2:]
-            print("Step {}: edge{} op{}, edge{} op{}".format(
-                i + 1, id1 // self.num_ops + 1,
-                       id1 % self.num_ops + 1,
-                       id2 // self.num_ops + 1,
-                       id2 % self.num_ops + 1))
+            print("Step {}: node{} op{}, node{} op{}".format(
+                i + 1, id1 // self.num_ops,
+                       id1 % self.num_ops,
+                       id2 // self.num_ops,
+                       id2 % self.num_ops))
             gene_normal.append((PRIMITIVES[id1 % self.num_ops], id1 // self.num_ops))
             gene_normal.append((PRIMITIVES[id2 % self.num_ops], id2 // self.num_ops))
 
@@ -119,11 +119,11 @@ class Trainer:
         gene_reduce = []
         for i, x in enumerate(x_reduces):
             id1, id2 = np.abs(x).argsort()[-2:]
-            print("Step {}: edge{} op{}, edge{} op{}".format(
-                i + 1, id1 // self.num_ops + 1,
-                       id1 % self.num_ops + 1,
-                       id2 // self.num_ops + 1,
-                       id2 % self.num_ops + 1))
+            print("Step {}: node{} op{}, node{} op{}".format(
+                i + 1, id1 // self.num_ops,
+                       id1 % self.num_ops,
+                       id2 // self.num_ops,
+                       id2 % self.num_ops))
             gene_reduce.append((PRIMITIVES[id1 % self.num_ops], id1 // self.num_ops))
             gene_reduce.append((PRIMITIVES[id2 % self.num_ops], id2 // self.num_ops))
 
