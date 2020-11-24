@@ -29,7 +29,7 @@ Some code is based on the [DARTS](https://github.com/quark0/darts) repo.
 - Please have a licence file `mosek.lic` following [this page](https://docs.mosek.com/9.2/licensing/quickstart.html#i-don-t-have-a-license-file-yet), and place this file in the directory `$HOME/mosek/mosek.lic`.
 
 ## Usage
-- Search
+- #### Search
 
 For our two-stage search, please run:
 ```
@@ -41,7 +41,7 @@ python ./tools/train_search_single.py --cutout --auxiliary
 ```
 The one-stage search usually takes about 120 epochs (until the termination condition is satisfied for all intermediate nodes) to co-train the architecture parameters and network weights, after which the architecture is fixed and another 600 epochs follow to optimize the searched architecture. Empirically, a smaller initial learning rate makes an earlier termination.
 
-- Evaluation
+- #### Evaluation
 
 To retrain (evaluate) our two-stage ISTA-NAS architecture, please run:
 ```
@@ -51,7 +51,7 @@ For the architectures searched by one-stage ISTA-NAS, please run:
 ```
 python ./tools/evaluation.py --auxiliary --cutout --onestage --arch $1
 ```
-Note that there are BN layers appended to non-parameterized operations in our one-stage ISTA-NAS architectures. 
+Note that there are BN layers appended to non-parameterized operations in our one-stage ISTA-NAS architectures.
 
 ## Citation
 If you find ISTA-NAS useful in your research, please consider citing:
