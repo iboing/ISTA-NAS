@@ -45,11 +45,11 @@ The one-stage search usually takes about 120 epochs (until the termination condi
 
 To retrain (evaluate) our two-stage ISTA-NAS architecture, please run:
 ```
-python ./tools/evaluation.py --auxiliary --cutout --arch $1
+python ./tools/evaluation.py --auxiliary --cutout --arch ISTA_twostage
 ```
-For the architectures searched by one-stage ISTA-NAS, please run:
+For the architecture searched by one-stage ISTA-NAS, please run:
 ```
-python ./tools/evaluation.py --auxiliary --cutout --onestage --arch $1
+python ./tools/evaluation.py --auxiliary --cutout --onestage --arch ISTA_onestage
 ```
 Note that there are BN layers appended to non-parameterized operations in our one-stage ISTA-NAS architectures.
 
