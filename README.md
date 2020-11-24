@@ -17,7 +17,9 @@ We further develop a one-stage framework where search and evaluation share the s
 
 Some code is based on the [DARTS](https://github.com/quark0/darts) repo.
 
-
+<div align="center">
+  <img src="https://raw.githubusercontent.com/iboing/ISTA-NAS/main/fig.png"/>
+</div>
 
 ## Dependencies
 - Python >= 3.7
