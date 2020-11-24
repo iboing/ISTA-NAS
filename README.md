@@ -18,7 +18,7 @@ We further develop a one-stage framework where search and evaluation share the s
 Some code is based on the [DARTS](https://github.com/quark0/darts) repo.
 
 <div align="center">
-  <img style="height: 70%; width: 70%;" src="https://raw.githubusercontent.com/iboing/ISTA-NAS/main/fig.png"/>
+  <img style="height: 50%; width: 50%;" src="https://raw.githubusercontent.com/iboing/ISTA-NAS/main/fig.png"/>
 </div>
 
 ## Dependencies
